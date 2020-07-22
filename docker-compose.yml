@@ -6,6 +6,7 @@ services:
     container_name: openssh-server
     environment:
       - PUID=1000
+      - PUBLIC_KEY=${PUBLIC_KEY}
       - PGID=1000
       - TZ=Europe/London
       - USER_NAME=phab
