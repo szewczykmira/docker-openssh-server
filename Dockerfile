@@ -28,5 +28,7 @@ RUN \
  rm -rf \
 	/tmp/*
 
+RUN apk add git python3
+
 # add local files
 COPY /root /
