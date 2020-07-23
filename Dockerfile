@@ -28,7 +28,7 @@ RUN \
  rm -rf \
 	/tmp/*
 
-RUN apk add git python3
+RUN apk add git python3 openssh vim 
 
 # add local files
 COPY /root /
