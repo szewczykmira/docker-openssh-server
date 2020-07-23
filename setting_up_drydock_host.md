@@ -10,13 +10,8 @@ PUBLIC_KEY=puthereyourpublickey
 4. Run `docker-compose build`
 5. Run `docker-compose up`
 6. Connect to doker container via ssh `ssh phab@127.0.0.1 -p 2222`
-7. Open `vim .bash_profile`:
-```
-eval $(ssh-agent -s)
-ssh-add ~/ssh_host_keys/ssh_host_rsa_key
-```
-7a. `sudo cp .bash_profile /etc/profile`
-8. Add public key as `deploy_key` in proper repository
+7. `cp ssh_host_keys/ssh_host_rsa_key ~/.ssh/id_rsa`
+8. Add `ssh_host_keys/ssh_host_rsa_key.pub` as `deploy_key` in proper repository
 9. Using Phabricators documentation set-up Repository Automation.
 10. Test repository automation from Phabricator UI.
 
